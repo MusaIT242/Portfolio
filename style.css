@@ -226,26 +226,24 @@ footer {
 
 }
 
-:root {
-  /* Default (Light) Theme Colors */
-  --text-color: #34495e; /* Default text color */
-  --primary-color: #2980b9; /* Link color */
-  --card-background: white; /* White background for .container sections */
-  --card-alt-background: #ecf0f1; /* Background for .contact-section p */
-  --skills-background: #e8f4fd; /* Background for .skills-section */
-  --skills-border: #bcdff7;
-  --input-border: #ddd; /* Form input border */
-  --main-navbar-color: #2c3e50; /* Dark blue/grey nav bar color */
+.nav-toggle-btn {
+  background: none;
+  color: var(--text-color); /* Uses the text color variable */
+  border: 1px solid var(--text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Dark Mode Overrides */
-.dark-mode {
-  --text-color: #ecf0f1; /* Light text */
-  --primary-color: #90caf9; /* Light blue link color */
-  --card-background: #1e1e1e; /* Very dark grey for sections */
-  --card-alt-background: #2c3e50; /* Slightly different dark background */
-  --skills-background: #34495e; /* Darker skills section */
-  --skills-border: #2c3e50;
-  --input-border: #555; /* Darker input border */
-  --main-navbar-color: #121212; /* Black for a very dark nav bar */
+.nav-toggle-btn:hover {
+  background-color: var(--text-color);
+  color: var(--main-navbar-color); /* Flips the color on hover */
+}
+
+/* Add a smooth transition to the main content elements */
+.left-column, .right-column, .skills-section, .navbar, footer {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
