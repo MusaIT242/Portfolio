@@ -223,4 +223,29 @@ footer {
     color: #2c3e50;
     margin-top: 10px;
     min-height: 20px;
+
+}
+
+:root {
+  /* Default (Light) Theme Colors */
+  --text-color: #34495e; /* Default text color */
+  --primary-color: #2980b9; /* Link color */
+  --card-background: white; /* White background for .container sections */
+  --card-alt-background: #ecf0f1; /* Background for .contact-section p */
+  --skills-background: #e8f4fd; /* Background for .skills-section */
+  --skills-border: #bcdff7;
+  --input-border: #ddd; /* Form input border */
+  --main-navbar-color: #2c3e50; /* Dark blue/grey nav bar color */
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+  --text-color: #ecf0f1; /* Light text */
+  --primary-color: #90caf9; /* Light blue link color */
+  --card-background: #1e1e1e; /* Very dark grey for sections */
+  --card-alt-background: #2c3e50; /* Slightly different dark background */
+  --skills-background: #34495e; /* Darker skills section */
+  --skills-border: #2c3e50;
+  --input-border: #555; /* Darker input border */
+  --main-navbar-color: #121212; /* Black for a very dark nav bar */
 }
