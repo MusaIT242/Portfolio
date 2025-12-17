@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    /* Use the variable for body background */
+    background: var(--body-background);
+    /* Use the variable for general text color */
+    color: var(--text-color); 
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transition for body */
+}
+
+
+:root {
+    /* Default (Light) Theme Colors */
+    --body-background: #f5f5f5;
+    --text-color: #34495e; 
+    --primary-color: #2980b9; 
+    --card-background: white; 
+    --card-alt-background: #ecf0f1; 
+    --skills-background: #e8f4fd; 
+    --skills-border: #bcdff7;
+    --input-border: #ddd; 
+    --main-navbar-color: #2c3e50; 
+    --heading-color: #2c3e50;
+    --submit-btn-background: #2c3e50;
+}
+
+.dark-mode {
+    --body-background: #121212; /* Very dark background */
+    --text-color: #ecf0f1; 
+    --primary-color: #90caf9; 
+    --card-background: #1e1e1e; 
+    --card-alt-background: #2c3e50; 
+    --skills-background: #34495e; 
+    --skills-border: #2c3e50;
+    --input-border: #555; 
+    --main-navbar-color: #000000; /* Black for a very dark nav bar */
+    --heading-color: #ecf0f1; /* Light headings in dark mode */
+    --submit-btn-background: #3498db;
+}
+
+
+.navbar {
+
+    background: var(--main-navbar-color); 
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.4s ease;
+}
+
+.navbar a {
+    color: white; /* Use variable for link text */
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #3498db; 
+    background-color: rgba(255,255,255,0.1);
+    text-decoration: none;
+}
+
+/* Two-Column Layout */
+.container {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.left-column, .right-column {
+    /* Use variable */
+    background: var(--card-background); 
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Headings and Profile */
+h2, h3, .name {
+    /* Use variable for headings */
+    color: var(--heading-color); 
+    transition: color 0.4s ease;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Use variable */
+    border: 4px solid var(--main-navbar-color); 
+    display: block;
+    margin: 0 auto 15px;
+    transition: border-color 0.4s ease;
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.job-title {
+    color: #7f8c8d; /* Keep gray for a subtle effect */
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* Contact Section */
+.contact-section {
+    margin: 25px 0;
+}
+
+.contact-section p {
+    margin: 10px 0;
+    padding: 8px;
+    /* Use variable */
+    background: var(--card-alt-background); 
+    border-radius: 5px;
+    transition: background-color 0.4s ease;
+}
+
+.contact-section a {
+    /* Use variable */
+    color: var(--primary-color); 
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.4s ease;
+}
+
+/* Skills Section */
+.skills-section {
+    /* Use variables */
+    background: var(--skills-background); 
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--skills-border);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.skills-section dt {
+    font-weight: bold;
+    margin-top: 15px;
+    /* Use variable */
+    color: var(--heading-color); 
+    font-size: 1.1em;
+    transition: color 0.4s ease;
+}
+
+.skills-section dd {
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    /* Use variable */
+    background: var(--card-background); 
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+    transition: background-color 0.4s ease;
+}
+
+/* About Me Section */
+.about-section p {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 15px 0;
+    /* Use variable */
+    color: var(--text-color); 
+    font-size: 1.05em;
+    transition: color 0.4s ease;
+}
+
+/* Message Form */
+.message-form input[type="text"],
+.message-form input[type="email"],
+.message-form textarea {
+    /* ... existing styles ... */
+    /* Use variable */
+    border: 2px solid var(--input-border); 
+    /* ... existing styles ... */
+    /* Set text and background to match theme */
+    background: var(--card-background);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.4s, color 0.4s;
+}
+
+.message-form input[type="submit"] {
+    /* ... existing styles ... */
+    /* Use variable */
+    background: var(--submit-btn-background); 
+    /* ... existing styles ... */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.message-form input[type="submit"]:hover {
+    background: #3498db; /* Keep hover color consistent for good UX */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    /* Use variable */
+    background: var(--main-navbar-color); 
+    /* Use variable */
+    color: var(--text-color); 
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Quote Section */
+#quoteDisplay {
+    font-style: italic;
+    /* Use variable */
+    color: var(--heading-color); 
+    margin-top: 10px;
+    min-height: 20px;
+    transition: color 0.4s ease;
+}
+
+.nav-toggle-btn {
+    background: none;
+    color: white; /* Uses the text color variable */
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle-btn:hover {
+    background-color: var(--text-color);
+    color: var(--main-navbar-color); /* Flips the color on hover */
+}
