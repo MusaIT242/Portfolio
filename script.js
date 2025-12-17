@@ -98,38 +98,3 @@ if (toggleButton) {
 }
 
 });
-
-const toggleButton = document.getElementById('dark-mode-toggle');
-const body = document.body;
-const darkModeKey = 'dark-mode-enabled';
-
-if (toggleButton) {
-    // 1. Check for user preference on page load
-    const savedTheme = localStorage.getItem(darkModeKey);
-
-    if (savedTheme === 'true') {
-        body.classList.add('dark-mode');
-    }
-
-    // Function to update button text
-    const updateButtonText = (isDark) => {
-        toggleButton.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-    };
-
-    // 2. Add event listener to the button
-    toggleButton.addEventListener('click', () => {
-        // Toggle the 'dark-mode' class on the body
-        body.classList.toggle('dark-mode');
-
-        // Check the current state and save preference to local storage
-        const isDarkMode = body.classList.contains('dark-mode');
-        
-        localStorage.setItem(darkModeKey, isDarkMode ? 'true' : 'false');
-        
-        updateButtonText(isDarkMode);
-    });
-
-    // 3. Set initial button text based on loaded theme
-    const isInitialDark = body.classList.contains('dark-mode');
-    updateButtonText(isInitialDark);
-}
