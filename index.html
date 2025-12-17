@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <nav>
+        <a href="Lab2.html">Lab 1</a>
+        <a href="Lab3.html">Lab 2</a>
+        <a href="index.html">Lab 3</a>
+	<button id="dark-mode-toggle" class="nav-toggle-btn">Toggle Dark Mode</button>
+    </nav>
+</header>
+
+<!-- Content Layout -->
+<main class="container" id="main-content">
+    
+    <!-- LEFT COLUMN -->
+    <section class="left-column" id="home">
+        <div class="profile-section">
+            <img src="memememe.png" alt="Profile Image" class="profile-img">
+            <h2 class="name">John Mark Musa</h2>
+            <span class="job-title" id="jobTitle">Web Developer</span>
+        </div>
+
+        <hr>
+
+        <div class="contact-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:jhonmarkmusa123@gmail.com">jhonmarkmusa123@gmail.com</a></p>
+        </div>
+
+        <hr>
+
+        <div class="skills-section" id="skillsSection">
+            <h2>Skills</h2>
+            <button id="toggleSkillsBtn" class="toggle-btn">Hide Skills</button>
+            <dl>
+                <dt>Frontend</dt>
+                <dd>HTML</dd>
+                <dd>CSS</dd>
+                
+                <dt>Backend</dt>
+                <dd>Java</dd>
+                <dd>PHP</dd>
+                <dd>JavaScript</dd>
+                <dd>Python</dd>
+            </dl>
+        </div>
+    </section>
+
+    <!-- RIGHT COLUMN -->
+    <section class="right-column" id="about">
+        <div class="about-section">
+            <h2 id="greeting">About Me</h2>
+            <p>
+                Hello! I'm John Mark Musa, a Nationalian from the class of IT 242. A beginner Web Developer eager to learn new things.
+                I'm learning advance backend programming and still learning other languages.
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="message-section" id="contact">
+            <h2>Message Me</h2>
+            <form class="message-form" id="contactForm" action="submit" method="post">
+                <label for="nameField">Name:</label><br>
+                <input type="text" id="nameField" name="name" required><br><br>
+
+                <label for="emailField">Email:</label><br>
+                <input type="email" id="emailField" name="email" required><br><br>
+
+                <label for="msgBox">Message:</label><br>
+                <textarea id="msgBox" name="message" maxlength="200" rows="4"></textarea>
+                <div id="counter">200 characters remaining</div><br>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
+        <div class="quote-section">
+            <button id="quoteBtn" class="toggle-btn">Get Motivated</button>
+            <p id="quoteDisplay"></p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer id="dateDisplay">
+    WebProg - Web Programming 2025
+</footer>
+
+</body>
+</html>
